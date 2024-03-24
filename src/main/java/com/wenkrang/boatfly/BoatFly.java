@@ -30,6 +30,7 @@ import static org.bukkit.Bukkit.getServer;
 
 
 public final class BoatFly extends JavaPlugin {
+    public static JavaPlugin plugin;
     public static ItemStack BOOK_ITEM;
 
     public static ItemStack REGULAR;
@@ -40,6 +41,7 @@ public final class BoatFly extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        plugin = this;
         // Plugin startup logic
         getServer().getConsoleSender().sendMessage("    ____              __  ________     ");
         getServer().getConsoleSender().sendMessage("   / __ )____  ____ _/ /_/ ____/ /_  __");

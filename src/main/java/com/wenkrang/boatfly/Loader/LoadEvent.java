@@ -10,6 +10,8 @@ import com.wenkrang.boatfly.event.GUI.table.OpenTable;
 import com.wenkrang.boatfly.event.GUI.table.TableCouldPut;
 import com.wenkrang.boatfly.lib.ConsoleLoger;
 
+import static com.wenkrang.boatfly.BoatFly.plugin;
+import static org.bukkit.Bukkit.getPluginManager;
 import static org.bukkit.Bukkit.getServer;
 
 public class LoadEvent {
@@ -30,6 +32,7 @@ public class LoadEvent {
         getServer().getPluginManager().registerEvents(new Click(), BoatFly.getPlugin(BoatFly.class));
         getServer().getPluginManager().registerEvents(new PlayerInteract(), BoatFly.getPlugin(BoatFly.class));
         getServer().getPluginManager().registerEvents(new VehicleDestroy(), BoatFly.getPlugin(BoatFly.class));
+        getPluginManager().registerEvents(new VehicleCreate(), plugin);
 //        getServer().getPluginManager().registerEvents(new OpenTable(), BoatFly.getPlugin(BoatFly.class));
 //        getServer().getPluginManager().registerEvents(new TableCouldPut(), BoatFly.getPlugin(BoatFly.class));
 //        getServer().getPluginManager().registerEvents(new Click2(), BoatFly.getPlugin(BoatFly.class));

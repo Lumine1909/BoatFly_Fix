@@ -25,6 +25,7 @@ com\wenkrang\boatfly\event\GUI\book\Click2.class
 com\wenkrang\boatfly\event\GUI\table\OpenTable.class
 com\wenkrang\boatfly\Loader\LoadCommand.class
 com\wenkrang\boatfly\event\GUI\OnEng$4.class
+com\wenkrang\boatfly\event\VehicleCreate.class
 com\wenkrang\boatfly\event\PlayerSwapHandItems.class
 com\wenkrang\boatfly\event\GUI\CouldPut.class
 com\wenkrang\boatfly\event\PlayerSwapHandItems$1.class
