@@ -5,6 +5,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Boat;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.vehicle.VehicleCreateEvent;
 import org.bukkit.inventory.ItemStack;
@@ -15,8 +16,11 @@ import java.util.stream.Collectors;
 import static com.wenkrang.boatfly.BoatFly.plugin;
 
 public class VehicleCreate implements Listener {
-    @EventHandler
+    @EventHandler (priority = EventPriority.MONITOR)
     public void onVehicleCreate(VehicleCreateEvent e) {
+        if (e.isCancelled() || !e.getVehicle().isValid()) {
+            return;
+        }
         if (e.getVehicle() instanceof Boat && ((Boat) e.getVehicle()).getBoatType().equals(Boat.Type.OAK)) {
             Bukkit.getScheduler().runTaskLater(plugin, () -> handleCustomName((Boat) e.getVehicle()), 1);
         }
